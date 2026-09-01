@@ -1,4 +1,5 @@
-import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, Check } from "typeorm";
+import { Cart } from "src/cart/cart.entity";
+import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, Check, OneToOne } from "typeorm";
 
 type Role = 'customer' | 'admin';
 
@@ -41,4 +42,7 @@ export class User {
     default: 'customer',
   })
   role: Role;
+
+  @OneToOne(() => Cart, (cart) => cart.user)
+  cart: Cart | null
 }

@@ -1,5 +1,6 @@
+import { CartItem } from "src/cart_items/cart-item.entity";
 import { Category } from "src/category/categories.entity";
-import { Check, Column, CreateDateColumn, Entity, JoinColumn, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
+import { Check, Column, CreateDateColumn, Entity, JoinColumn, ManyToOne, OneToMany, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity('products')
 @Check(`"price" > 0`)
@@ -46,4 +47,7 @@ export class Product {
         nullable: false
     })
     description: string;
+
+    @OneToMany(() => CartItem, (cartItem) => cartItem.product)
+    cartItems: CartItem[]
 }
