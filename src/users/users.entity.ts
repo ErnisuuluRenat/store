@@ -1,5 +1,7 @@
 import { Cart } from "src/cart/cart.entity";
-import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, Check, OneToOne } from "typeorm";
+import { Order_item } from "src/order_items/order_items.entity";
+import { Order } from "src/orders/orders.entity";
+import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, Check, OneToOne, OneToMany } from "typeorm";
 
 type Role = 'customer' | 'admin';
 
@@ -45,4 +47,7 @@ export class User {
 
   @OneToOne(() => Cart, (cart) => cart.user)
   cart: Cart | null
+
+  @OneToMany(() => Order, (order) => order.user)
+  orders : Order[]
 }

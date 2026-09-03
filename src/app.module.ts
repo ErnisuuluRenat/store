@@ -9,6 +9,8 @@ import { CategoryModule } from './category/categories.module';
 import { ProductsModule } from './products/products.module';
 import { CartModule } from './cart/cart.module';
 import { CartItemsModule } from './cart_items/cart_items.module';
+import { OrdersModule } from './orders/orders.module';
+import { OrderItemsModule } from './order_items/order_items.module';
 
 @Module({
   imports: [
@@ -30,6 +32,8 @@ import { CartItemsModule } from './cart_items/cart_items.module';
     ProductsModule,
     CartModule,
     CartItemsModule,
+    OrdersModule,
+    OrderItemsModule,
   ],
   controllers: [AppController],
   providers: [AppService],
