@@ -1,7 +1,6 @@
 import { Order } from "src/orders/orders.entity";
 import { Product } from "src/products/products.entity";
-import { User } from "src/users/users.entity";
-import { Column, Entity, JoinColumn, ManyToMany, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
+import { Column, Entity, JoinColumn, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
 
 
 @Entity("order_items")
