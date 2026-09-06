@@ -12,7 +12,7 @@ import { CartItemsModule } from './cart_items/cart_items.module';
 import { OrdersModule } from './orders/orders.module';
 import { OrderItemsModule } from './order_items/order_items.module';
 import { Cart } from './cart/cart.entity';
-import { CartItem } from './cart_items/cart-item.entity';
+import { CartItem } from './cart_items/cart_item.entity';
 import { Product } from './products/products.entity';
 import { Order } from './orders/orders.entity';
 import { Order_item } from './order_items/order_items.entity';

@@ -10,7 +10,7 @@ import * as bcrypt from 'bcrypt'
 @Injectable()
 export class AuthService {
     constructor(@InjectRepository(User) private readonly userRepository: Repository<User>,
-    private jwtService: JwtService) {}
+    private readonly jwtService: JwtService) {}
 
     async register(dto : RegisterUserDto) {
         const {username, password, email} = dto

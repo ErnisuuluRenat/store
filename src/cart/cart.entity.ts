@@ -1,4 +1,4 @@
-import { CartItem } from "src/cart_items/cart-item.entity";
+import { CartItem } from "src/cart_items/cart_item.entity";
 import { User } from "src/users/users.entity";
 import { Entity, EntityMetadata, JoinColumn, OneToMany, OneToOne, PrimaryGeneratedColumn } from "typeorm";
 
